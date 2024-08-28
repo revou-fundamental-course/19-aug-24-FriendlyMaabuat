@@ -1,20 +1,19 @@
-// Function to prompt for the name on page load if not already provided
 function promptForName() {
   let name = localStorage.getItem("userName");
   if (!name) {
     name = prompt("What is your name?", "");
     if (name) {
       localStorage.setItem("userName", name);
+    } else {
+      name = "Guest";
     }
   }
-  document.getElementById("nama-user").innerHTML = name + ", ";
+  document.getElementById("nama-user").textContent = name + ", ";
 }
 
-// Function to update date and time
 function updateDateTime() {
   const now = new Date();
 
-  // Format day, date, month, and year
   const dayNames = [
     "Sunday",
     "Monday",
@@ -44,7 +43,6 @@ function updateDateTime() {
   const month = monthNames[now.getMonth()];
   const year = now.getFullYear();
 
-  // Format time
   const hours = String(now.getHours()).padStart(2, "0");
   const minutes = String(now.getMinutes()).padStart(2, "0");
   const seconds = String(now.getSeconds()).padStart(2, "0");
@@ -57,17 +55,14 @@ function updateDateTime() {
   ).textContent = `${dateString} ${timeString}`;
 }
 
-// Update time every second
 setInterval(updateDateTime, 1000);
 
-// Initialize the date and time when the page loads
 window.onload = function () {
   updateDateTime();
   promptForName();
 };
 
 function validateForm(event) {
-  // Prevent the default form submission
   event.preventDefault();
 
   const form = document.forms["message-form"];
@@ -93,5 +88,4 @@ function setSenderUI(name, birthDate, gender, message) {
   document.getElementById("sent-message").textContent = message;
 }
 
-// Attach the validateForm function to the form's submit event
 document.forms["message-form"].addEventListener("submit", validateForm);
