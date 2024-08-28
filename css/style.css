@@ -50,3 +50,107 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
+.facility-container {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px;
+  font-weight: 500;
+}
+
+.facility-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.facility-1 {
+  background-image: url(https://www.hindustantimes.com/ht-img/img/2023/09/02/1600x900/teachers_day_1693652054152_1693652065719.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.facility-1 h4 {
+  padding-top: 20px;
+  color: black;
+  margin: 240px 0 0;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.facility-2 {
+  background-image: url(https://www.ccgrass.com/wp-content/uploads/2018/09/Australia-01.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.facility-2 h4 {
+  padding-top: 20px;
+  color: black;
+  margin: 240px 0 0;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.facility-3 {
+  background-image: url(https://modelteaching.com/wp-content/uploads/2019/04/Classroom-Procedures-min.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.facility-3 h4 {
+  padding-top: 20px;
+  color: black;
+  margin: 240px 0 0;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.facility-4 {
+  background-image: url(https://uiii.ac.id/assets/images/1648990837-pexels-pixabay-256541.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.facility-4 h4 {
+  padding-top: 20px;
+  color: black;
+  margin: 240px 0 0;
+  font-size: 20px;
+  font-weight: 100;
+}
