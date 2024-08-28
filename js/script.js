@@ -1,9 +1,16 @@
-function replaceName() {
-  let name = prompt("What is your name?", "");
+// Function to prompt for the name on page load if not already provided
+function promptForName() {
+  let name = localStorage.getItem("userName");
+  if (!name) {
+    name = prompt("What is your name?", "");
+    if (name) {
+      localStorage.setItem("userName", name);
+    }
+  }
   document.getElementById("nama-user").innerHTML = name + ", ";
 }
-replaceName();
 
+// Function to update date and time
 function updateDateTime() {
   const now = new Date();
 
@@ -54,4 +61,37 @@ function updateDateTime() {
 setInterval(updateDateTime, 1000);
 
 // Initialize the date and time when the page loads
-window.onload = updateDateTime;
+window.onload = function () {
+  updateDateTime();
+  promptForName();
+};
+
+function validateForm(event) {
+  // Prevent the default form submission
+  event.preventDefault();
+
+  const form = document.forms["message-form"];
+  const name = form["full-name"].value;
+  const birthDate = form["dob"].value;
+  const gender = form["gender"].value;
+  const message = form["message"].value;
+
+  if (name === "" || birthDate === "" || gender === "" || message === "") {
+    alert("Please fill out all the form fields.");
+    return false;
+  }
+
+  setSenderUI(name, birthDate, gender, message);
+
+  return false;
+}
+
+function setSenderUI(name, birthDate, gender, message) {
+  document.getElementById("sent-full-name").textContent = name;
+  document.getElementById("sent-dob").textContent = birthDate;
+  document.getElementById("sent-gender").textContent = gender;
+  document.getElementById("sent-message").textContent = message;
+}
+
+// Attach the validateForm function to the form's submit event
+document.forms["message-form"].addEventListener("submit", validateForm);
