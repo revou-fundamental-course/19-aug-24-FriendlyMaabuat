@@ -154,3 +154,59 @@ nav {
   font-size: 20px;
   font-weight: 100;
 }
+
+.form-container {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 200px;
+}
+
+.user-form {
+  width: 50%;
+  margin-left: 40px;
+}
+
+.user-form input[type="text"],
+.user-form input[type="date"],
+.user-form textarea {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Group label and input together */
+.form-group {
+  margin-bottom: 5px; /* Adds space between groups */
+  display: flex;
+}
+
+.user-form input[type="submit"] {
+  margin-bottom: 40px;
+}
+
+/* Align label and textarea */
+.form-group label {
+  margin-bottom: 5px; /* Space between label and textarea */
+}
+.gender-selection input[type="radio"] {
+  display: flex;
+  align-items: center;
+}
+
+.gender-selection label {
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+  position: relative;
+  padding-right: 40px;
+}

@@ -67,6 +67,55 @@
         </section>
       </section>
       <hr />
+
+      <section class="form-container">
+        <form
+          class="user-form"
+          name="message-form"
+          onsubmit="return validateForm()"
+        >
+          <h2 style="margin-top: 40px">Message Us</h2>
+          <div class="form-group">
+            <label for="full-name">Name:</label>
+            <input
+              id="full-name"
+              placeholder="Name"
+              type="text"
+              name="full-name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input id="dob" type="date" name="dob" />
+          </div>
+          <div class="form-group gender-selection">
+            <span>Sex:</span>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              placeholder="Message"
+              name="message"
+            ></textarea>
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+        <div class="form-item">
+          <p>Current Time: <span id="current-time"></span></p>
+          <p>Name: <span id="sent-full-name"></span></p>
+          <p>Date of Birth: <span id="sent-dob"></span></p>
+          <p>Sex: <span id="sent-gender"></span></p>
+          <p>Message: <span id="sent-message"></span></p>
+        </div>
+      </section>
+      <script src="js/script.js"></script>
     </main>
+    <hr />
+    <footer class="footer">Created by Christian</footer>
   </body>
 </html>
